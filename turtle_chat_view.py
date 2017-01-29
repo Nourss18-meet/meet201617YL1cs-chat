@@ -49,7 +49,7 @@ class TextBox(TextInput):
         turtle.goto(100,-self.hight)
         turtle.goto(-150,-self.hight)
         turtle.mainloop()
-        
+    def write_msg(self):    
 #####################################################################################
 #                                  SendButton                                       #
 #####################################################################################
