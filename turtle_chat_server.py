@@ -1,5 +1,9 @@
+
+
+
 # Server for turtle_chat
 import sys, socket, select
+turtle_chat_view.py
 
 DEFAULT_HOST = 'localhost'
 SOCKET_LIST = []

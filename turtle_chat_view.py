@@ -39,19 +39,27 @@ from turtle_chat_widgets import Button,TextInput
 #   \r to your string.  Test it out at the Python shell for practice
 #####################################################################################
 ###############################################################################
+
+
 class TextBox(TextInput):
     def draw_box(self):
-        tutle.penup()
-        turtle.goto(-150,-self.hight)
-        turtle.pendown()
-        turtle.goto(-150,-self.hight*2)
-        turtle.goto(100,-self.hight*2)
-        turtle.goto(100,-self.hight)
-        turtle.goto(-150,-self.hight)
-        turtle.mainloop()
-    def write_msg(self):    
+        x=turtle.clone()
+        x.penup()
+        x.goto(-150,-self.height)
+        x.pendown()
+        x.goto(-150,-self.height*2)
+        x.goto(100,-self.height*2)
+        x.goto(100,-self.height)
+        x.goto(-150,-self.height)
+        x.mainloop()
+        
+    def write_msg(self):
+        self.writer.clear()
+        self.writer.write(self.get_msg())
+        
+        
 #####################################################################################
-#                                  SendButton                                       #
+#               e                   SendButton                                       #
 #####################################################################################
 #Make a class called SendButton, which will be a subclass of Button.
 #Button is an abstract class with one abstract method: fun.
@@ -85,8 +93,7 @@ class View:
     _LINE_SPACING=round(_SCREEN_HEIGHT/2/(_MSG_LOG_LENGTH+1))
 
     def __init__(self,username='Me',partner_name='Partner'):
-        '''
-        :param username: the name of this chat user
+        '''        :param username: the name of this chat user
         :param partner_name: the name of the user you are chatting with
         '''
         ###
