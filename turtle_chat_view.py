@@ -7,6 +7,9 @@
 import turtle 
 from turtle_chat_client import Client 
 from turtle_chat_widgets import Button, TextInput
+
+zft=turtle.Screen()
+zft.bgpic('nour55.gif')
 #import the Client class from the turtle_chat_client module
 #Finally, from the turtle_chat_widgets module, import two classes: Button and TextInput
 #####################################################################################
@@ -78,6 +81,7 @@ class SendButton(Button):
     def fun(self,x=None,y=None):
         self.view.send_msg()
 
+   
 ##################################################################
 #                             View                               #
 ##################################################################
